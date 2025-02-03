@@ -1,0 +1,243 @@
+:root {
+  --color-main: #212925;
+}
+body {
+width: 100%;
+height: 100%;
+min-height: 100vh;
+margin: 0;
+/* background-color: var(--color-main);*/
+background: linear-gradient(91deg, #00001e, #0a0a6e);
+font-family: 'Poppins', sans-serif;
+color: rgba(255,255,255,0.8);
+}
+.nav-item{text-align: center;}
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+grid-gap: 20px;
+align-items: stretch;
+}
+.grid > article {
+border: 3px solid #ccc;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+border-radius:30px;
+background-color: rgb(39, 40, 34);
+}
+.grid > article img {
+max-width: 100%;
+border-radius:30px;
+}
+.grid .text {
+padding: 20px;
+}
+
+.article-photo{
+  min-height: 150px;
+  min-width: 150px;
+  max-height: 600px;
+  width: auto;
+}
+
+.modal-content {
+  width: 30%;
+}
+.contenedor {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+}
+.modal-content{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20vh auto;
+  max-height: 1000px;
+  max-width: 1000px;
+  height: 40vh;
+  width: 60vw;
+}
+@font-face {
+  font-family: 'Whois';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Whois'), url('https://fonts.cdnfonts.com/s/19875/whois-mono.woff') format('woff');
+}
+
+.modal-header , .modal-body , .modal-footer{
+  width:45vw;
+  color:black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.follov{
+  width: 3%;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+.user_stats{
+  font-family: 'Whois', sans-serif;
+  font-size: 150%;
+}
+.modal-header .close{
+  color:black;
+}
+.close{
+  color: white;
+  font-size: 400%;
+  margin-right: 3%;
+  margin-top: 2%;
+  z-index: 1;
+  cursor: pointer;
+}
+.close:hover{
+  color: white;
+  font-size: 400%;
+}
+#profilefoto{
+  border: 5px solid white;
+  border-radius: 30px;
+}
+.instagram {
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.instagram:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/instagram.png");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+}
+.twitter {
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background: #1DA1F2;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.twitter:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/twitter.png");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+}
+.codepen {
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background: #000000;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.codepen:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/codepen.webp");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;cursor: pointer;
+}
+
+.github {
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background: #000000;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.github:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/github.png");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+
+.profile-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  background-image: url("./assets/img/anonymous.jpg"); 
+  filter: contrast(1);
+  /* default.jpg / dflt.png / default_xmas.png / anonymous.jpg / stormtropper.jpg */
+  background-size: 100%;
+  background-position: 80% 0%;
+  background-repeat: no-repeat;
+  border:7px solid white;
+  cursor: pointer;
+}
+.ssmm{
+  display: inline-block;
+  margin: 3%;
+}
+.socialmedia{
+  margin-top: 10%;
+}
+.profile-info {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5%;
+}

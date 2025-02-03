@@ -1,0 +1,42 @@
+FROM ubuntu:latest
+
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+
+# Instalar Apache, PHP y extensiones necesarias
+RUN apt-get update -y && apt-get install -y \    
+    apache2  \
+    php \
+    net-tools\
+    dos2unix \
+    nano \
+    ssh \
+    mariadb-server \
+    php-mysql \
+    php-curl \
+    mariadb-client \
+    openssh-server \
+    whatweb \
+    nmap
+
+RUN apt-get update && apt-get install -y locales && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales
+
+
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
+echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
+
+# Establecemos la contraseña para el usuario root
+RUN echo 'root:Admin1234' | chpasswd
+RUN service ssh start
+RUN rm -rf /var/www/
+#RUN mkdir /var/www/forum.com
+#COPY forum.com/ /var/www/forum.com/
+COPY ./ /var/www/
+RUN dos2unix /var/www/EasySetup.sh
+# COPY ./forum.com /var/www/
+RUN chmod 777 /var/www/EasySetup.sh
+RUN bash /var/www/EasySetup.sh
+
+CMD echo "Created by J0rd1s3rr4n0 -> https:github.com/j0rd1s3rr4n0/" && service apache2 start & service mariadb start & service ssh start & tail -f /dev/null

@@ -1,0 +1,13 @@
+﻿http://wordlist.sourceforge.net/
+http://www.openwall.com/mirrors/
+http://www.cotse.com/tools/wordlists1.htm
+http://www.ai.uga.edu/ftplib/natural-language/moby/
+http://ns2.elhacker.net/wordlists/
+http://packetstormsecurity.org/Crackers/wordlists/
+http://www.outpost9.com/files/WordLists.html
+ftp://ftp.openwall.com/pub/wordlists/
+http://www.vulnerabilityassessment.co.uk/passwords.htm
+http://www.cotse.com/tools/wordlists2.htm
+http://hackbbs.org/wordlists/
+http://gdataonline.com/downloads/GDict/
+http://acacha.org/~sergi/wordlists/dirb/

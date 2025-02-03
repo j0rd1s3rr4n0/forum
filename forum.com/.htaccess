@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/@([^/]+)$
+RewriteRule ^ profile/?u=%1 [L,QSA]
+
+<FilesMatch "\.(env|htaccess|db|bak|htpasswd|ini|phps|fla|psd|log|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+SetEnv SERVER_ADMIN root@localhost.com
